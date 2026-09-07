@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: linkedin-content-manager
+
+# App-specific settings. Values are pulled from environment variables so
+# secrets never live in source control - the same intent as the Python
+# project's .env file loaded via python-dotenv.
+app:
+  openai-api-key: ${OPENAI_API_KEY:}
+  serper-api-key: ${SERPER_API_KEY:}
+  openai-model: ${OPENAI_MODEL_NAME:gpt-4o}
+  omniroute-base-url: ${OMNIROUTE_BASE_URL:http://localhost:20128/v1}
+  omniroute-model: ${OMNIROUTE_MODEL:gpt-4o}
+  omniroute-api-key: ${OMNIROUTE_API_KEY:}
+
+logging:
+  file:
+    name: logs/content-manager.log
+  level:
+    com.linkedin.contentmanager: INFO

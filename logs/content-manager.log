@@ -1,0 +1,36 @@
+2026-09-07T09:24:51.722+05:30  INFO 27076 --- [linkedin-content-manager] [main] c.l.c.ContentManagerApplication          : Starting ContentManagerApplication v1.0.0 using Java 21.0.12.1 with PID 27076 (C:\dev\linkedin-content-manager\backend\target\content-manager-1.0.0.jar started by atul2 in C:\dev\linkedin-content-manager\backend)
+2026-09-07T09:24:51.733+05:30  INFO 27076 --- [linkedin-content-manager] [main] c.l.c.ContentManagerApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-07T09:24:55.410+05:30  INFO 27076 --- [linkedin-content-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-09-07T09:24:55.440+05:30  INFO 27076 --- [linkedin-content-manager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-07T09:24:55.441+05:30  INFO 27076 --- [linkedin-content-manager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-09-07T09:24:55.581+05:30  INFO 27076 --- [linkedin-content-manager] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-07T09:24:55.584+05:30  INFO 27076 --- [linkedin-content-manager] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3626 ms
+2026-09-07T09:24:57.125+05:30  INFO 27076 --- [linkedin-content-manager] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-09-07T09:24:57.162+05:30  INFO 27076 --- [linkedin-content-manager] [main] c.l.c.ContentManagerApplication          : Started ContentManagerApplication in 7.815 seconds (process running for 9.278)
+2026-09-07T09:27:40.717+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [g_state={"i_l":0,"i_ll":1779866887064,"i_b":"JH8lGp95Mr1scGTexPsl0pgX8YrnJk4LAAeTfMBnxZ4","i_e":{"enable_itp_optimization":0},"i_et":1779866300083};] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2026-09-07T09:27:40.729+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-07T09:27:40.730+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-07T09:27:40.732+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-07T09:27:41.060+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.controller.PipelineController      : Pipeline request started topicLength=10
+2026-09-07T09:27:41.064+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage started stage=Research
+2026-09-07T09:27:45.385+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task started agent=LinkedIn Trend Researcher promptLength=6520
+2026-09-07T09:27:58.042+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task completed agent=LinkedIn Trend Researcher outputLength=5011 durationMs=12656
+2026-09-07T09:27:58.043+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage completed stage=Research outputLength=5011 durationMs=16979
+2026-09-07T09:27:58.046+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage started stage=Writing
+2026-09-07T09:27:58.047+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task started agent=LinkedIn Content Writer promptLength=5362
+2026-09-07T09:28:03.341+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task completed agent=LinkedIn Content Writer outputLength=1121 durationMs=5294
+2026-09-07T09:28:03.342+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage completed stage=Writing outputLength=1121 durationMs=5296
+2026-09-07T09:28:03.344+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage started stage=Critique
+2026-09-07T09:28:03.353+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task started agent=Content Quality Critic promptLength=1481
+2026-09-07T09:28:14.036+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task completed agent=Content Quality Critic outputLength=9730 durationMs=10682
+2026-09-07T09:28:14.042+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage completed stage=Critique outputLength=9730 durationMs=10698
+2026-09-07T09:28:14.045+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage started stage=Optimization
+2026-09-07T09:28:14.047+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task started agent=LinkedIn Post Optimizer promptLength=11188
+2026-09-07T09:28:27.572+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task completed agent=LinkedIn Post Optimizer outputLength=1307 durationMs=13525
+2026-09-07T09:28:27.573+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage completed stage=Optimization outputLength=1307 durationMs=13528
+2026-09-07T09:28:27.577+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage started stage=Scheduling
+2026-09-07T09:28:27.579+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task started agent=LinkedIn Publishing Strategist promptLength=1827
+2026-09-07T09:28:34.037+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.linkedin.contentmanager.agent.Agent    : Agent task completed agent=LinkedIn Publishing Strategist outputLength=6067 durationMs=6458
+2026-09-07T09:28:34.041+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.s.PipelineOrchestratorService      : Pipeline stage completed stage=Scheduling outputLength=6067 durationMs=6463
+2026-09-07T09:28:34.043+05:30  INFO 27076 --- [linkedin-content-manager] [http-nio-8080-exec-1] c.l.c.controller.PipelineController      : Pipeline request completed topicLength=10 stageCount=5 durationMs=52983
